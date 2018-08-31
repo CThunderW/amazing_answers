@@ -1,0 +1,25 @@
+<p>Contact Us</p>
+
+<% if @message %>
+<p>
+<%= @message %>
+</p>
+<% end %>
+
+<%= form_tag(contact_submit_path) do %>
+    <div>
+        <%= label_tag(:full_name) %> <br/>
+        <%= text_field_tag(:full_name) %>
+    </div>
+
+    <div>
+        <%=  label_tag(:email) %> <br/>
+        <%= email_field_tag(:email) %>
+    </div>
+
+    <div>
+        <%= label_tag(:message) %> <br/>
+        <%= text_area_tag(:message, nil, cols: 80, rows: 5) %>
+    </div>
+    <%= submit_tag("Contact Us!") %>
+<% end  %>

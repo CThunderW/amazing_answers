@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>🕶 AwesomeAnswers</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+       <!-- <a href="<%= root_path %> ">Home</a>-->
+        <%= link_to("Home", root_path) %>
+        <%= link_to("Contact", contact_path)%>
+  <%#
+  In a layout file, the 'yield' is replaced with the contents of an erb
+    template that we  render with the 'render' method.
+    %>
+    
+    <%= yield %>
+  </body>
+</html>
